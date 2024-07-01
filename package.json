@@ -1,6 +1,6 @@
 {
     "name": "spond-api",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Spond API Client for Node.js",
     "main": "dist/spond.js",
     "type": "module",
