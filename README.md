@@ -6,7 +6,7 @@ This package provides a unofficial TypeScript class `Spond` that allows you to i
 ## Installation
 
 ```sh
-npm install spond
+npm install spond-api
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ npm install spond
 ### Importing the Module
 
 ```typescript
-import { Spond } from 'spond';
+import { Spond } from 'spond-api';
 ```
 
 ### Creating an Instance
