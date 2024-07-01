@@ -1,5 +1,5 @@
 {
-    "name": "spond",
+    "name": "spond-api",
     "version": "1.0.0",
     "description": "Spond API Client for Node.js",
     "main": "dist/spond.js",
