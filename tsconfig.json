@@ -11,7 +11,6 @@
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
         "declaration": true,
-        "emitDeclarationOnly": true,
         "outDir": "./dist",
         "rootDir": "./src"
     },
