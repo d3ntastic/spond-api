@@ -184,6 +184,7 @@ export class Spond extends SpondBase {
   async getEvents({ groupId, subgroupId, includeScheduled = false, maxEnd, minEnd, maxStart, minStart, maxEvents = 100 }: GetEventsParams = {}): Promise<any[]> {
     const url = `${this.apiUrl}sponds/`;
     const params: { [key: string]: string } = {
+      'order': 'asc',
       'max': maxEvents.toString(),
       'scheduled': includeScheduled.toString()
     };
