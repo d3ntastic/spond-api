@@ -79,7 +79,7 @@ export abstract class SpondBase {
   }
 
   async login(): Promise<void> {
-    const login_url = `${this.apiUrl}login`
+    const login_url = `${this.apiUrl}auth2/login`
     const data = { email: this.username, password: this.password }
 
     const response = await this._session(login_url, {
@@ -89,7 +89,7 @@ export abstract class SpondBase {
     })
 
     const login_result: any = await response.json()
-    this.token = login_result.loginToken
+    this.token = login_result?.accessToken?.token
 
     if (!this.token) {
       throw new AuthenticationError(`Login failed. Response received: ${JSON.stringify(login_result)}`)
