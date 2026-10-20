@@ -12,12 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           registry-url: https://registry.npmjs.org/
+      # npm stage requires npm >= 11.15
+      - run: npm install -g npm@latest
       - run: npm ci
       - run: npm run build
-      - run: npm publish
+      # Stage-only token: version must be approved on npmjs.com with 2FA
+      - run: npm stage publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
